@@ -1,5 +1,0 @@
----
-title: Sample Portfolio Item
-thumbnail: /assets/uploads/sample.jpg
-youtube: https://youtube.com/watch?v=dQw4w9WgXcQ
----
