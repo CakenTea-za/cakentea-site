@@ -6,11 +6,45 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "site_content"
-    label: "Site Content"
+  - name: "homepage"
+    label: "Homepage"
     files:
       - file: "index.html"
-        label: "Homepage"
-        name: "homepage"
+        label: "Intro Text"
+        name: "intro"
         fields:
           - { label: "Welcome Message", name: "intro", widget: "text" }
+
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["Preproduction", "Production", "Postproduction"] }
+      - { label: "Description", name: "description", widget: "text" }
+
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "content/portfolio"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Thumbnail Image", name: "thumbnail", widget: "image" }
+      - { label: "YouTube Link", name: "youtube", widget: "string" }
+
+  - name: "team"
+    label: "Team Bios"
+    folder: "content/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "text" }
+      - { label: "Profile Picture", name: "photo", widget: "image" }
+      - { label: "Instagram", name: "instagram", widget: "string", required: false }
+      - { label: "TikTok", name: "tiktok", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+      - { label: "Facebook", name: "facebook", widget: "string", required: false }
