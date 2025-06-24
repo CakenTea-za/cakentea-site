@@ -1,1 +1,145 @@
-<!DOCTYPE html><html><head><title>CakenTea</title></head><body><h1>Welcome to CakenTea</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CakenTea | Your Quality Matters</title>
+  <style>
+    :root {
+      --primary-bg: #000;
+      --primary-text: #fff;
+      --accent: #2a70ff;
+      --highlight: #ff4d00;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --primary-bg: #fff;
+        --primary-text: #000;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: var(--primary-bg);
+      color: var(--primary-text);
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      background: var(--primary-bg);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.5rem;
+      top: 0;
+      z-index: 999;
+      border-bottom: 1px solid var(--primary-text);
+    }
+
+    nav a {
+      color: var(--primary-text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 300;
+    }
+
+    .highlight {
+      font-weight: 900;
+      color: var(--highlight);
+    }
+
+    .tagline {
+      font-weight: 600;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .intro {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--primary-text);
+    }
+
+    .cta {
+      background: transparent;
+      border: 2px solid var(--accent);
+      padding: 0.5rem 1.5rem;
+      margin-top: 2rem;
+      color: var(--accent);
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+
+    .cta:hover {
+      background: var(--accent);
+      color: var(--primary-bg);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="/portfolio.html">Our Work</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Cake<span class="highlight">n</span>Tea</h1>
+    <div class="tagline">Multimedia Specialists</div>
+    <p>Your Quality Matters</p>
+    <a href="/portfolio.html"><button class="cta">View Portfolio</button></a>
+  </header>
+
+  <section class="intro" id="about">
+    <p>
+      Welcome to CakenTea, where your creative media needs are our cup of tea! Just like a perfectly baked cake, we believe in layering creativity, quality, and precision to deliver media content that’s a treat for the eyes.
+    </p>
+    <p>
+      We don’t just serve up the basics; we add the icing on the cake by crafting content that truly represents your brand’s unique flavour. Whether you need a dash of visual flair or a full-blown production feast, we’re here to brew up solutions that leave a lasting impression.
+    </p>
+    <p>
+      Because at CakenTea, your quality matters — and we make sure it’s always sweetly served.
+    </p>
+  </section>
+
+  <footer id="contact">
+    <p>Got an idea? Grab a slice of Cake, a hot cup of Tea, and let’s get to work.</p>
+    <p><a href="mailto:cakentea.za@gmail.com" style="color: var(--accent);">cakentea.za@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
