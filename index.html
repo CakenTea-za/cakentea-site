@@ -1,219 +1,69 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CakenTea | Your Quality Matters</title>
+  <title>CakenTea | Dynamic Site</title>
   <style>
-    :root {
-      --primary-bg: #000;
-      --primary-text: #fff;
-      --accent: #2a70ff;
-      --highlight: #ff4d00;
-    }
-
-    @media (prefers-color-scheme: light) {
-      :root {
-        --primary-bg: #fff;
-        --primary-text: #000;
-      }
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: var(--primary-bg);
-      color: var(--primary-text);
-      scroll-behavior: smooth;
-    }
-
-    nav {
-      position: fixed;
-      width: 100%;
-      background: var(--primary-bg);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: flex-end;
-      gap: 1.5rem;
-      top: 0;
-      z-index: 999;
-      border-bottom: 1px solid var(--primary-text);
-    }
-
-    nav a {
-      color: var(--primary-text);
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-      font-weight: 300;
-    }
-
-    .highlight {
-      font-weight: 900;
-      color: var(--highlight);
-    }
-
-    .tagline {
-      font-weight: 600;
-      margin-top: 1rem;
-      font-size: 1.1rem;
-    }
-
-    .intro {
-      padding: 4rem 2rem;
-      max-width: 900px;
-      margin: auto;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      border-top: 1px solid var(--primary-text);
-    }
-
-    .cta {
-      background: transparent;
-      border: 2px solid var(--accent);
-      padding: 0.5rem 1.5rem;
-      margin-top: 2rem;
-      color: var(--accent);
-      cursor: pointer;
-      font-size: 1rem;
-      transition: all 0.2s ease;
-    }
-
-    .cta:hover {
-      background: var(--accent);
-      color: var(--primary-bg);
-    }
+    body { background: #000; color: #fff; font-family: Arial; margin: 0; padding: 2rem; }
+    h2 { margin-top: 3rem; }
+    .section { margin-bottom: 3rem; }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .card { background: #111; padding: 1rem; border: 1px solid #333; }
+    img { width: 100%; height: auto; border-radius: 0.5rem; }
+    a { color: #2a70ff; }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="/portfolio.html">Our Work</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<h1>CakenTea (Dynamic Homepage)</h1>
 
-  <header>
-    <h1>Cake<span class="highlight">n</span>Tea</h1>
-    <div class="tagline">Multimedia Specialists</div>
-    <p>Your Quality Matters</p>
-    <a href="/portfolio.html"><button class="cta">View Portfolio</button></a>
-  </header>
+<section id="services" class="section">
+  <h2>Services</h2>
+  <div class="grid" id="services-grid"></div>
+</section>
 
-  <section class="intro" id="about">
-    <p>
-      Welcome to CakenTea, where your creative media needs are our cup of tea! Just like a perfectly baked cake, we believe in layering creativity, quality, and precision to deliver media content that’s a treat for the eyes.
-    </p>
-    <p>
-      We don’t just serve up the basics; we add the icing on the cake by crafting content that truly represents your brand’s unique flavour. Whether you need a dash of visual flair or a full-blown production feast, we’re here to brew up solutions that leave a lasting impression.
-    </p>
-    <p>
-      Because at CakenTea, your quality matters — and we make sure it’s always sweetly served.
-    </p>
-  </section>
+<section id="portfolio" class="section">
+  <h2>Portfolio</h2>
+  <div class="grid" id="portfolio-grid"></div>
+</section>
 
-  
-  <section class="services" id="services">
-    <h2 style="text-align: center; margin-top: 4rem;">Services</h2>
-    <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">
-      We handle everything from start to finish, just like baking the perfect cake—from mixing the ingredients to the final decoration. Whether it’s concept creation or the final polish, we’ve got every step covered to make sure your project is a masterpiece from beginning to end.
-    </p>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding: 2rem;">
-      <div style="flex: 1; min-width: 250px;">
-        <h3>Preproduction</h3>
-        <ul>
-          <li title="We can join your meetings to assess your goals and strategy.">Consulting</li>
-          <li title="We carefully craft each scene and message.">Scriptwriting</li>
-          <li title="We plan every shot for visual storytelling.">Storyboarding</li>
-        </ul>
-      </div>
-      <div style="flex: 1; min-width: 250px;">
-        <h3>Production</h3>
-        <ul>
-          <li title="Bring your visuals to life with powerful vocal presence.">Voice Acting</li>
-          <li title="Top-quality visuals with professional framing and lighting.">Videography</li>
-          <li title="Photos captured with creative style and precision.">Photography</li>
-        </ul>
-      </div>
-      <div style="flex: 1; min-width: 250px;">
-        <h3>Postproduction</h3>
-        <ul>
-          <li title="Cut, blend and polish your footage into a compelling story.">Video Editing</li>
-          <li title="Refine and enhance photos with detail and clarity.">Photo Editing</li>
-          <li title="Add movement and visual flair to boost engagement.">Motion Graphics</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<section id="team" class="section">
+  <h2>Meet the Team</h2>
+  <div class="grid" id="team-grid"></div>
+</section>
 
-  
-  <section class="about" id="about" style="padding: 4rem 2rem; max-width: 1000px; margin: auto;">
-    <h2 style="text-align: center;">Get to know us!</h2>
-    <p style="margin-top: 2rem;">
-      Founded in 2021, CakenTea was born out of a passion for storytelling and a deep-rooted commitment to quality. With a strong background in video animation, graphic design, and videography, we’ve honed our craft in the vibrant, creative landscape of Johannesburg, South Africa—where inspiration pours out of every corner.
-    </p>
-    <p>
-      Since our inception, we’ve had the privilege of working with a diverse range of clients, including non-profit organisations and government sectors, helping them bring their visions to life through compelling multimedia content.
-    </p>
-    <p>
-      At CakenTea, we’re more than just a production agency—we’re a partner in your creative journey, dedicated to making your story shine.
-    </p>
+<script>
+  async function loadData() {
+    const services = await fetch('services.json').then(res => res.json());
+    const portfolio = await fetch('portfolio.json').then(res => res.json());
+    const team = await fetch('team.json').then(res => res.json());
 
-    <h3 style="margin-top: 3rem;">Our Mission</h3>
-    <p>
-      To deliver unparalleled excellence in multimedia production by blending creativity, precision, and innovation. We craft compelling content that not only meets but exceeds expectations—from the initial concept to the final polish.
-    </p>
+    const servicesGrid = document.getElementById('services-grid');
+    services.forEach(item => {
+      servicesGrid.innerHTML += `<div class='card'><h4>${item.title}</h4><p>${item.category}</p><p>${item.description}</p></div>`;
+    });
 
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 4rem;">
-      <div style="text-align: center; flex: 1; min-width: 300px; padding: 1rem;">
-        <img src="assets/team-cake.jpg" alt="Cake" style="width: 200px; height: 200px; object-fit: cover; border: 3px solid white; border-radius: 16px;" />
-        <h4>Keketso “Cake” Moteetee</h4>
-        <p style="font-size: 0.95rem;">Co-founder, storyteller, and concept chef. 9 years of media expertise with a sweet touch for pre-production and production leadership.</p>
-        <p>
-          <a href="https://instagram.com/cakentea_za" target="_blank">Instagram</a> |
-          <a href="https://linkedin.com/company/cakentea/" target="_blank">LinkedIn</a>
-        </p>
-      </div>
-      <div style="text-align: center; flex: 1; min-width: 300px; padding: 1rem;">
-        <img src="assets/team-tea.jpg" alt="Tea" style="width: 200px; height: 200px; object-fit: cover; border: 3px solid white; border-radius: 16px;" />
-        <h4>Thivhusiwi “Tea” Mamaila</h4>
-        <p style="font-size: 0.95rem;">Co-founder, post-pro wizard, and videography barista. With 9 years in the game, he delivers smooth and satisfying final cuts.</p>
-        <p>
-          <a href="https://instagram.com/cakentea_za" target="_blank">Instagram</a> |
-          <a href="https://linkedin.com/company/cakentea/" target="_blank">LinkedIn</a>
-        </p>
-      </div>
-    </div>
-  </section>
+    const portfolioGrid = document.getElementById('portfolio-grid');
+    portfolio.forEach(item => {
+      portfolioGrid.innerHTML += \`<div class='card'><a href="\${item.youtube}" target="_blank"><img src="\${item.thumbnail}" alt="\${item.title}" /><p>\${item.title}</p></a></div>\`;
+    });
 
-  <footer id="contact">
-    <p>Got an idea? Grab a slice of Cake, a hot cup of Tea, and let’s get to work.</p>
-    <p><a href="mailto:cakentea.za@gmail.com" style="color: var(--accent);">cakentea.za@gmail.com</a></p>
-  </footer>
+    const teamGrid = document.getElementById('team-grid');
+    team.forEach(member => {
+      teamGrid.innerHTML += \`
+        <div class='card'>
+          <img src="\${member.photo}" alt="\${member.name}" />
+          <h4>\${member.name}</h4>
+          <p>\${member.bio}</p>
+          <p><a href="\${member.instagram}" target="_blank">Instagram</a> | <a href="\${member.linkedin}" target="_blank">LinkedIn</a></p>
+        </div>\`;
+    });
+  }
+
+  loadData();
+</script>
 
 </body>
 </html>
