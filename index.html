@@ -36,9 +36,9 @@
 
 <script>
   async function loadData() {
-    const services = await fetch('services.json').then(res => res.json());
-    const portfolio = await fetch('portfolio.json').then(res => res.json());
-    const team = await fetch('team.json').then(res => res.json());
+    const services = await fetch('assets/data/services.json').then(res => res.json());
+    const portfolio = await fetch('assets/data/portfolio.json').then(res => res.json());
+    const team = await fetch('assets/data/team.json').then(res => res.json());
 
     const servicesGrid = document.getElementById('services-grid');
     services.forEach(item => {
