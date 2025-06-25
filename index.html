@@ -1,1 +1,201 @@
-<!DOCTYPE html><html><head><title>CakenTea</title></head><body><h1>Final polish version placeholder</h1></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CakenTea</title>
+  <style>
+    :root {
+      --accent: #2a70ff;
+      --highlight: #ff4d00;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: black;
+      color: white;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.8);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    nav .nav-links a {
+      margin-left: 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav .nav-links a:hover {
+      color: var(--accent);
+    }
+    .logo {
+      height: 40px;
+    }
+    header {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .video-bg {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%; width: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .highlight { color: var(--highlight); font-weight: bold; }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 { text-align: center; margin-bottom: 2rem; }
+
+    .grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.1);
+      overflow: hidden;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover img {
+      transform: scale(1.05);
+    }
+    .card h3, .card h4, .card p {
+      margin: 0.5rem 0;
+    }
+    .social-icons {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+    .card:hover .social-icons {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .social-icons a {
+      margin-right: 0.5rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="assets/logo-dark.png" class="logo" alt="Logo" />
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Our Work</a>
+      <a href="#team">About Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <video class="video-bg" autoplay muted loop>
+      <source src="assets/media/hero-background.mp4" type="video/mp4">
+    </video>
+    <h1>Cake<span class="highlight">n</span>Tea</h1>
+    <p>Multimedia Specialists – Because Your Quality Matters</p>
+  </header>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="grid" id="services-grid"></div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Our Work</h2>
+    <div class="grid" id="portfolio-grid"></div>
+  </section>
+
+  <section id="team">
+    <h2>Meet the Team</h2>
+    <div class="grid" id="team-grid"></div>
+  </section>
+
+  <footer id="contact">
+    <p>Got an idea? Grab a slice of Cake, a hot cup of Tea, and let’s get to work.</p>
+    <p>Email: <a href="mailto:cakentea.za@gmail.com">cakentea.za@gmail.com</a></p>
+  </footer>
+
+  <script>
+    async function loadData() {
+      const services = await fetch('assets/data/services.json').then(res => res.json());
+      const portfolio = await fetch('assets/data/portfolio.json').then(res => res.json());
+      const team = await fetch('assets/data/team.json').then(res => res.json());
+
+      const servicesGrid = document.getElementById('services-grid');
+      services.forEach(item => {
+        servicesGrid.innerHTML += `<div class="card"><h3>${item.title}</h3><p>${item.description}</p></div>`;
+      });
+
+      const portfolioGrid = document.getElementById('portfolio-grid');
+      portfolio.forEach(item => {
+        portfolioGrid.innerHTML += `
+          <div class="card">
+            <a href="${item.youtube}" target="_blank">
+              <img src="${item.thumbnail}" alt="${item.title}" />
+              <h4>${item.title}</h4>
+            </a>
+          </div>`;
+      });
+
+      const teamGrid = document.getElementById('team-grid');
+      team.forEach(member => {
+        teamGrid.innerHTML += `
+          <div class="card">
+            <img src="${member.photo}" alt="${member.name}" />
+            <h4>${member.name}</h4>
+            <p>${member.bio}</p>
+            <div class="social-icons">
+              <a href="${member.instagram}" target="_blank">Instagram</a>
+              <a href="${member.linkedin}" target="_blank">LinkedIn</a>
+            </div>
+          </div>`;
+      });
+    }
+
+    loadData();
+  </script>
+</body>
+</html>
