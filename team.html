@@ -5,14 +5,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Meet the Team | CakenTea</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-light: url('assets/media/light-bg.jpg');
+      --bg-dark: url('assets/media/dark-bg.jpg');
+      --text-color-light: #000;
+      --text-color-dark: #fff;
+    }
+
     body {
       margin: 0;
       padding: 2rem;
-      font-family: sans-serif;
+      font-family: 'Roboto', sans-serif;
+      color: var(--text-color-dark);
       background-color: #000;
-      color: #fff;
+      background-image: var(--bg-dark);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
+
+    @media (prefers-color-scheme: light) {
+      body {
+        background-color: #fff;
+        background-image: var(--bg-light);
+        color: var(--text-color-light);
+      }
+    }
+
     h1 {
       text-align: center;
       font-weight: 600;
@@ -27,12 +48,22 @@
     .member {
       max-width: 300px;
       text-align: center;
+      background-color: rgba(0,0,0,0.5);
+      padding: 1rem;
+      border-radius: 16px;
+      backdrop-filter: blur(4px);
     }
+    @media (prefers-color-scheme: light) {
+      .member {
+        background-color: rgba(255,255,255,0.7);
+      }
+    }
+
     .member img {
       width: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
-      border: 5px solid #555;
+      border: 4px solid #555;
       border-radius: 16px;
       transition: transform 0.3s ease;
     }
@@ -42,10 +73,10 @@
     .name {
       font-weight: 600;
       margin-top: 1rem;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
     .role {
-      color: #aaa;
+      color: #ccc;
       font-size: 0.9rem;
     }
     .bio {
@@ -56,7 +87,7 @@
     .socials {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 0.8rem;
       margin-top: 0.5rem;
     }
     .socials a {
@@ -79,15 +110,15 @@
           const div = document.createElement("div");
           div.className = "member";
           div.innerHTML = `
-            <img src="${person.image}" alt="${person.name}" />
-            <div class="name">${person.name}</div>
-            <div class="role">${person.role}</div>
-            <div class="bio">${person.bio}</div>
+            <img src="\${person.image}" alt="\${person.name}" />
+            <div class="name">\${person.name}</div>
+            <div class="role">\${person.role}</div>
+            <div class="bio">\${person.bio}</div>
             <div class="socials">
-              <a href="${person.socials.instagram}" target="_blank">IG</a>
-              <a href="${person.socials.linkedin}" target="_blank">IN</a>
-              <a href="${person.socials.facebook}" target="_blank">FB</a>
-              <a href="${person.socials.tiktok}" target="_blank">TT</a>
+              \${person.socials.instagram ? `<a href="\${person.socials.instagram}" target="_blank">IG</a>` : ''}
+              \${person.socials.linkedin ? `<a href="\${person.socials.linkedin}" target="_blank">IN</a>` : ''}
+              \${person.socials.facebook ? `<a href="\${person.socials.facebook}" target="_blank">FB</a>` : ''}
+              \${person.socials.tiktok ? `<a href="\${person.socials.tiktok}" target="_blank">TT</a>` : ''}
             </div>
           `;
           grid.appendChild(div);
