@@ -3,181 +3,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CakenTea</title>
+  <title>CakenTea Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;400;600;900&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
     body {
+      font-family: sans-serif;
+      background: #000;
+      color: #fff;
       margin: 0;
-      font-family: 'Archivo', sans-serif;
-      color: #fff;
-      background-color: #000;
+      padding: 2rem;
     }
-    nav {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      background: rgba(0,0,0,0.85);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 999;
-    }
-    nav img {
-      height: 40px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 1rem;
-      font-weight: 600;
-    }
-    section {
-      padding: 120px 20px 60px;
-      scroll-margin-top: 100px;
-    }
-    header {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
-    header video {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-    .hero-text {
-      position: relative;
-      top: 40%;
+    h1 {
       text-align: center;
     }
-    .hero-text h1 {
-      font-weight: 300;
-      font-size: 3rem;
-    }
-    .hero-text p {
-      font-weight: 100;
-      font-size: 1.2rem;
-    }
-    .services-grid, .portfolio-grid {
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 1rem;
       margin-top: 2rem;
     }
-    .service-card, .portfolio-card {
-      background: #111;
+    .service-card {
+      border: 1px solid #333;
       padding: 1rem;
-      border-radius: 12px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .service-card:hover, .portfolio-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(255,255,255,0.1);
-    }
-    .portfolio-card img {
-      width: 100%;
       border-radius: 10px;
-    }
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 500px;
-      margin: auto;
-    }
-    .contact-form input, .contact-form textarea {
-      padding: 0.8rem;
-      border: none;
-      border-radius: 8px;
-      font-family: inherit;
-    }
-    .contact-form button {
-      background: transparent;
-      border: 2px solid #2a70ff;
-      color: #2a70ff;
-      padding: 0.6rem 1rem;
-      border-radius: 999px;
-      font-weight: 600;
-      cursor: pointer;
+      background: #111;
       transition: 0.3s ease;
     }
-    .contact-form button:hover {
-      background: #2a70ff;
-      color: #fff;
+    .service-card:hover {
+      background: #222;
+      transform: translateY(-4px);
+    }
+    .service-card h3 {
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <img id="logo" src="" alt="CakenTea Logo" />
-    <div>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Our Work</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <header>
-    <video autoplay muted loop id="heroVideo"></video>
-    <div class="hero-text">
-      <h1>Cake<span style="font-weight:900;">n</span>Tea</h1>
-      <p>Multimedia Specialists</p>
-      <p style="font-weight:600;">Your Quality Matters</p>
-    </div>
-  </header>
-
-  <section id="services">
-    <h2>Services</h2>
-    <div class="services-grid">
-      <div class="service-card">Consulting</div>
-      <div class="service-card">Scriptwriting</div>
-      <div class="service-card">Videography</div>
-    </div>
-  </section>
-
-  <section id="portfolio">
-    <h2>Our Work</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-card"><img src="assets/uploads/thumbnail.png" alt="Portfolio 1" /></div>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p style="max-width:600px; margin:auto;">Founded in 2021, CakenTea was born out of a passion for storytelling...</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Your message..." rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+  <h1>Our Services</h1>
+  <div class="services-grid" id="servicesGrid"></div>
 
   <script>
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.getElementById('logo').src = prefersDark ? 'assets/logo-dark.png' : 'assets/logo-light.png';
-
-    const video = document.getElementById('heroVideo');
-    const source = document.createElement('source');
-    source.src = prefersDark ? 'assets/media/hero-dark.mp4' : 'assets/media/hero-light.mp4';
-    source.type = 'video/mp4';
-    video.appendChild(source);
-    video.load();
+    fetch('assets/data/services.json')
+      .then(res => res.json())
+      .then(data => {
+        const grid = document.getElementById('servicesGrid');
+        data.forEach(service => {
+          const card = document.createElement('div');
+          card.className = 'service-card';
+          card.innerHTML = `<h3>${service.title}</h3><p>${service.description}</p>`;
+          grid.appendChild(card);
+        });
+      });
   </script>
 </body>
 </html>

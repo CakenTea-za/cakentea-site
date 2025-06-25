@@ -1,1 +1,15 @@
-[]
+
+[
+  {
+    "title": "Consulting",
+    "description": "We can be there for you as soon as the rooster crows!"
+  },
+  {
+    "title": "Scriptwriting",
+    "description": "Need help with the recipe? Say no more!"
+  },
+  {
+    "title": "Videography",
+    "description": "The main course of our production services—where the magic truly happens."
+  }
+]
