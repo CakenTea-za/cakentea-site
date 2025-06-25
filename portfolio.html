@@ -1,93 +1,76 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CakenTea Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Work | CakenTea</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: black;
-      color: white;
+      font-family: sans-serif;
+      background-color: #000;
+      color: #fff;
     }
-
     h1 {
       text-align: center;
-      padding: 2rem 1rem;
-      font-weight: 300;
+      padding: 2rem;
+      font-weight: 600;
     }
-
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 10px;
       padding: 1rem;
     }
-
-    .item {
+    .thumb {
       position: relative;
-      cursor: pointer;
       overflow: hidden;
+      cursor: pointer;
     }
-
-    .item img {
+    .thumb img {
       width: 100%;
-      height: auto;
       display: block;
       transition: transform 0.3s ease;
     }
-
-    .item:hover img {
+    .thumb:hover img {
       transform: scale(1.05);
     }
-
     .title-overlay {
       position: absolute;
       bottom: 0;
+      background: rgba(0,0,0,0.6);
       width: 100%;
       padding: 0.5rem;
-      background: rgba(0, 0, 0, 0.6);
       text-align: center;
-      font-size: 1rem;
-      opacity: 0;
-      transition: opacity 0.3s ease;
+      font-size: 0.95rem;
+      display: none;
     }
-
-    .item:hover .title-overlay {
-      opacity: 1;
+    .thumb:hover .title-overlay {
+      display: block;
     }
   </style>
 </head>
 <body>
   <h1>Our Work</h1>
-  <div class="grid" id="portfolio-grid">
-    <!-- JS will inject items here -->
-  </div>
+  <div class="grid" id="portfolioGrid"></div>
 
   <script>
-    const data = [
-      {
-        title: "Sample Portfolio Item",
-        thumbnail: "assets/uploads/sample.jpg",
-        youtube: "https://youtube.com/watch?v=dQw4w9WgXcQ"
-      }
-      // Add more items here or load dynamically
-    ];
-
-    const grid = document.getElementById('portfolio-grid');
-
-    data.forEach(item => {
-      const div = document.createElement('div');
-      div.className = 'item';
-      div.innerHTML = `
-        <a href="\${item.youtube}" target="_blank">
-          <img src="\${item.thumbnail}" alt="\${item.title}" />
-          <div class="title-overlay">\${item.title}</div>
-        </a>
-      `;
-      grid.appendChild(div);
-    });
+    fetch('assets/data/portfolio.json')
+      .then(res => res.json())
+      .then(data => {
+        const grid = document.getElementById('portfolioGrid');
+        data.forEach(project => {
+          const div = document.createElement('div');
+          div.className = 'thumb';
+          div.onclick = () => window.open(project.video_url, '_blank');
+          div.innerHTML = `
+            <img src="${project.thumbnail}" alt="${project.title}" />
+            <div class="title-overlay">${project.title}</div>
+          `;
+          grid.appendChild(div);
+        });
+      });
   </script>
 </body>
 </html>
