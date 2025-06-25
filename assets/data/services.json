@@ -2,83 +2,111 @@
   "Preproduction": [
     {
       "title": "Consulting",
-      "description": "We can be there for you as soon as the rooster crows!"
+      "description": "We can be there for you as soon as the rooster crows! Joining your meetings to carefully assess your needs and goals, mixing insights and strategies to ensure everything is perfectly set up for a successful production process."
     },
     {
       "title": "Scriptwriting",
-      "description": "Need some help with the recipe? Say no more!"
+      "description": "Need some help with the recipe? Say no more! We carefully craft each line and scene to ensure your message is both engaging and impactful. Just as a baker balances sweetness and texture, we balance creativity and clarity to deliver a script that shines."
     },
     {
       "title": "Storyboarding",
-      "description": "We map out every scene, frame by frame."
+      "description": "We map out every scene, frame by frame, ensuring each moment is as rich and engaging as the final product. It\u2019s our way of mixing creativity with precision, so your story comes together seamlessly."
     }
   ],
   "Production": [
     {
-      "title": "Social Media",
-      "description": "Fast, fresh, and full of flavour."
+      "title": "Voice Acting",
+      "description": "What\u2019s a pretty face without a gorgeous voice? Take your vision to different level, touch the hearts of your audience with a powerful vocal presence."
     },
     {
-      "title": "YouTube",
-      "description": "High-impact content crafted for creators."
+      "title": "Videography",
+      "description": "The main course of our production services\u2014where the magic truly happens. Just like a chef perfects every dish to ensure top-notch quality, we focus on every detail of your video to make it stand out."
     },
     {
-      "title": "Commercial",
-      "description": "Bold, flavourful, and impossible to ignore."
-    },
-    {
-      "title": "Motion Graphics",
-      "description": "Add some spice to your story with animated visuals."
-    },
-    {
-      "title": "Podcast",
-      "description": "Visually engaging audio experiences."
-    },
-    {
-      "title": "Interview",
-      "description": "Thoughtful visuals that complement every response."
-    },
-    {
-      "title": "Conference",
-      "description": "Capture and amplify the big moments on stage."
-    },
-    {
-      "title": "BTS",
-      "description": "The secret sauce of every great production."
-    },
-    {
-      "title": "Film",
-      "description": "Stories simmering with depth, honesty, and heart."
-    },
-    {
-      "title": "Drone",
-      "description": "Sweeping, stunning, and unforgettable."
-    },
-    {
-      "title": "Events",
-      "description": "Preserving the flavour of the moment."
+      "title": "Commercial/Promotional",
+      "description": "Cooking up attention-grabbing content? We bring the sizzle! Whether you\u2019re launching a new product or boosting your brand, we tailor each promo like a perfectly plated entr\u00e9e\u2014bold, flavourful, and impossible to ignore."
     },
     {
       "title": "Documentary",
-      "description": "We stir truth into storytelling."
+      "description": "We stir truth into storytelling. Like a slow-cooked stew, our documentaries simmer with depth, honesty, and heart\u2014capturing real stories with care, integrity, and a compelling narrative arc."
+    },
+    {
+      "title": "Corporate",
+      "description": "Professional doesn\u2019t mean bland. We season your corporate content with the right blend of clarity, confidence, and creativity\u2014presenting your company in the best possible light, with polish and purpose."
+    },
+    {
+      "title": "Property",
+      "description": "Show off your space like it\u2019s the star of the show. From stylish flats to sprawling estates, we frame every shot like a five-star dish\u2014highlighting charm, flow, and visual appeal."
+    },
+    {
+      "title": "Housing",
+      "description": "Whether it\u2019s cosy or cutting-edge, we showcase housing in a way that makes every corner feel like home. Crisp visuals, warm tones, and thoughtful pacing\u2014like setting the perfect table."
+    },
+    {
+      "title": "Hotel",
+      "description": "Let your hotel shine brighter than the breakfast buffet. We highlight comfort, luxury, and ambience\u2014inviting viewers in with stunning visuals that feel like a well-earned treat."
+    },
+    {
+      "title": "Resort",
+      "description": "We package paradise on screen. Like the ultimate getaway platter, our resort content blends beauty, serenity, and indulgence into one irresistible visual experience."
+    },
+    {
+      "title": "Vehicle",
+      "description": "We rev up your brand with high-performance visuals. Whether it\u2019s a rugged 4x4 or a sleek city ride, we capture the curves, motion, and thrill\u2014like serving up a high-speed delicacy."
+    },
+    {
+      "title": "Event",
+      "description": "From the first toast to the final encore, we capture every sparkle and stir. Think of it as preserving the flavour of the moment\u2014served fresh every time you hit play."
+    },
+    {
+      "title": "Educational",
+      "description": "Clear, digestible, and packed with value\u2014like a perfectly prepared learning snack. We transform information into engaging content that resonates and teaches with impact."
+    },
+    {
+      "title": "Aerial",
+      "description": "View the world from above, with visuals that truly soar. Our drone footage adds that perfect pinch of perspective\u2014sweeping, stunning, and unforgettable, like the cherry on top of your visual story."
+    },
+    {
+      "title": "Entertainment",
+      "description": "Whether it\u2019s laughs, gasps, or goosebumps, we serve entertainment with flair. Carefully paced and visually delicious\u2014because captivating content deserves a standing ovation."
+    },
+    {
+      "title": "Music Videos",
+      "description": "Where sound meets sight and the magic begins. We sync visuals to rhythm like pairing wine with dessert\u2014intentional, emotional, and unforgettable."
+    },
+    {
+      "title": "Travel Videos",
+      "description": "We bring wanderlust to life. Like a global tasting menu, we capture the spirit, sights, and soul of every destination\u2014tempting viewers to pack their bags and follow the flavour."
+    },
+    {
+      "title": "Social Media",
+      "description": "Fast, fresh, and full of flavour\u2014bite-sized content designed to catch the eye and get shared."
+    },
+    {
+      "title": "BTS [Behind the Scenes]",
+      "description": "The secret sauce of every great production. We show the real work, real people, and real moments behind the magic\u2014raw, authentic, and beautifully honest."
+    },
+    {
+      "title": "Animated Videos",
+      "description": "Sometimes, the best way to explain or enchant is with a dash of animation. From playful to professional, we cook up visuals that bring your message to life\u2014no camera required."
     },
     {
       "title": "Photography",
-      "description": "Each shot meticulously crafted."
-    },
-    {
-      "title": "Animation",
-      "description": "From playful to professional, no camera required."
+      "description": "The finishing touch that captures the essence of your story. The artful garnish that elevates a dish\u2014each shot meticulously crafted to highlight the details and bring your vision to life."
     }
   ],
   "Postproduction": [
     {
-      "title": "Motion Graphics",
-      "description": "Add artistic garnish and polish."
+      "title": "Video Editing",
+      "description": "Where everything comes together to create a cohesive and delightful experience. We blend footage with precision, adding just the right touches to enhance your story."
     },
     {
-      "title": "Video Editing",
-      "description": "Blend footage with precision and story."
+      "title": "Photo Editing",
+      "description": "Where raw ingredients become refined delicacies. We retouch, enhance, and perfect each image to bring out its full flavour."
+    },
+    {
+      "title": "Motion Graphics",
+      "description": "Add some spice to your story with animated visuals that inform and excite. Like artistic garnish, motion graphics give your content that extra flair, polish, and memorability."
     }
   ]
 }
