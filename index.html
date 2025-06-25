@@ -7,51 +7,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
+      margin: 0;
       font-family: sans-serif;
       background: #000;
       color: #fff;
-      margin: 0;
       padding: 2rem;
     }
-    h1 {
+    h2 {
       text-align: center;
+      font-weight: 600;
     }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
+    .columns {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
       margin-top: 2rem;
     }
-    .service-card {
-      border: 1px solid #333;
-      padding: 1rem;
-      border-radius: 10px;
-      background: #111;
-      transition: 0.3s ease;
+    .column {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
     }
-    .service-card:hover {
-      background: #222;
-      transform: translateY(-4px);
+    .column h3 {
+      font-weight: 600;
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
     }
-    .service-card h3 {
-      margin-top: 0;
+    .service {
+      position: relative;
+      padding: 0.5rem 0;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .service:hover {
+      color: #2a70ff;
+    }
+    .description {
+      display: none;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-top: 0.2rem;
+    }
+    .service:hover .description {
+      display: block;
     }
   </style>
 </head>
 <body>
-  <h1>Our Services</h1>
-  <div class="services-grid" id="servicesGrid"></div>
+  <h2>Our Services</h2>
+  <div class="columns" id="servicesColumns"></div>
 
   <script>
     fetch('assets/data/services.json')
       .then(res => res.json())
       .then(data => {
-        const grid = document.getElementById('servicesGrid');
-        data.forEach(service => {
-          const card = document.createElement('div');
-          card.className = 'service-card';
-          card.innerHTML = `<h3>${service.title}</h3><p>${service.description}</p>`;
-          grid.appendChild(card);
+        const container = document.getElementById('servicesColumns');
+        Object.keys(data).forEach(section => {
+          const col = document.createElement('div');
+          col.className = 'column';
+          col.innerHTML = `<h3>${section}</h3>`;
+          data[section].forEach(item => {
+            const entry = document.createElement('div');
+            entry.className = 'service';
+            entry.innerHTML = `<div>${item.title}</div><div class="description">${item.description}</div>`;
+            col.appendChild(entry);
+          });
+          container.appendChild(col);
         });
       });
   </script>

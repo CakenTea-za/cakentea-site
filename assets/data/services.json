@@ -1,15 +1,84 @@
-
-[
-  {
-    "title": "Consulting",
-    "description": "We can be there for you as soon as the rooster crows!"
-  },
-  {
-    "title": "Scriptwriting",
-    "description": "Need help with the recipe? Say no more!"
-  },
-  {
-    "title": "Videography",
-    "description": "The main course of our production services—where the magic truly happens."
-  }
-]
+{
+  "Preproduction": [
+    {
+      "title": "Consulting",
+      "description": "We can be there for you as soon as the rooster crows!"
+    },
+    {
+      "title": "Scriptwriting",
+      "description": "Need some help with the recipe? Say no more!"
+    },
+    {
+      "title": "Storyboarding",
+      "description": "We map out every scene, frame by frame."
+    }
+  ],
+  "Production": [
+    {
+      "title": "Social Media",
+      "description": "Fast, fresh, and full of flavour."
+    },
+    {
+      "title": "YouTube",
+      "description": "High-impact content crafted for creators."
+    },
+    {
+      "title": "Commercial",
+      "description": "Bold, flavourful, and impossible to ignore."
+    },
+    {
+      "title": "Motion Graphics",
+      "description": "Add some spice to your story with animated visuals."
+    },
+    {
+      "title": "Podcast",
+      "description": "Visually engaging audio experiences."
+    },
+    {
+      "title": "Interview",
+      "description": "Thoughtful visuals that complement every response."
+    },
+    {
+      "title": "Conference",
+      "description": "Capture and amplify the big moments on stage."
+    },
+    {
+      "title": "BTS",
+      "description": "The secret sauce of every great production."
+    },
+    {
+      "title": "Film",
+      "description": "Stories simmering with depth, honesty, and heart."
+    },
+    {
+      "title": "Drone",
+      "description": "Sweeping, stunning, and unforgettable."
+    },
+    {
+      "title": "Events",
+      "description": "Preserving the flavour of the moment."
+    },
+    {
+      "title": "Documentary",
+      "description": "We stir truth into storytelling."
+    },
+    {
+      "title": "Photography",
+      "description": "Each shot meticulously crafted."
+    },
+    {
+      "title": "Animation",
+      "description": "From playful to professional, no camera required."
+    }
+  ],
+  "Postproduction": [
+    {
+      "title": "Motion Graphics",
+      "description": "Add artistic garnish and polish."
+    },
+    {
+      "title": "Video Editing",
+      "description": "Blend footage with precision and story."
+    }
+  ]
+}
