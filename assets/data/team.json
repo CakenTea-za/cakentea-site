@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "name": "Keketso \u201cCake\u201d Moteetee",
+    "role": "Co-founder & Co-director",
+    "bio": "Whipping up imaginative concepts and executing them with precision. Keketso specialises in storytelling and preproduction\u2014guiding ideas from spark to screen with care and creativity.",
+    "image": "assets/team/team-cake.jpg",
+    "socials": {
+      "instagram": "https://instagram.com/cakentea_za",
+      "linkedin": "https://linkedin.com/in/keketso",
+      "facebook": "https://facebook.com/cakenteamultimediacreatives",
+      "tiktok": "https://tiktok.com/@cakentea_za"
+    }
+  },
+  {
+    "name": "Thivhusiwi \u201cTea\u201d Mamaila",
+    "role": "Co-founder & Co-director",
+    "bio": "A master of production and post. With 9 years of experience, Thivhu crafts visuals that captivate\u2014turning your vision into polished, immersive media magic.",
+    "image": "assets/team/team-tea.jpg",
+    "socials": {
+      "instagram": "https://instagram.com/cakentea_za",
+      "linkedin": "https://linkedin.com/in/thivhu",
+      "facebook": "https://facebook.com/cakenteamultimediacreatives",
+      "tiktok": "https://tiktok.com/@cakentea_za"
+    }
+  }
+]

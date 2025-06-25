@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meet the Team | CakenTea</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    h1 {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+    }
+    .member {
+      max-width: 300px;
+      text-align: center;
+    }
+    .member img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border: 5px solid #555;
+      border-radius: 16px;
+      transition: transform 0.3s ease;
+    }
+    .member img:hover {
+      transform: scale(1.05);
+    }
+    .name {
+      font-weight: 600;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+    .role {
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+    .bio {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .socials a {
+      color: #2a70ff;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Meet the Team</h1>
+  <div class="team-grid" id="teamGrid"></div>
+
+  <script>
+    fetch("assets/data/team.json")
+      .then(res => res.json())
+      .then(data => {
+        const grid = document.getElementById("teamGrid");
+        data.forEach(person => {
+          const div = document.createElement("div");
+          div.className = "member";
+          div.innerHTML = `
+            <img src="${person.image}" alt="${person.name}" />
+            <div class="name">${person.name}</div>
+            <div class="role">${person.role}</div>
+            <div class="bio">${person.bio}</div>
+            <div class="socials">
+              <a href="${person.socials.instagram}" target="_blank">IG</a>
+              <a href="${person.socials.linkedin}" target="_blank">IN</a>
+              <a href="${person.socials.facebook}" target="_blank">FB</a>
+              <a href="${person.socials.tiktok}" target="_blank">TT</a>
+            </div>
+          `;
+          grid.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
